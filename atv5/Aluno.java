@@ -4,14 +4,24 @@ public class Aluno {
     private int idade;
     private float notas[];
     private int totalNotas = 5;
+    private int matricula;
     
-    public Aluno(String nome, int idade){
-        this.setNome(nome);
+    public Aluno(int matricula, String nome, int idade){
+        this .matricula = matricula;
+    	this.setNome(nome);
         this.setIdade(idade);
         this.notas = new float[totalNotas];
     }
     
-    public String getNome() {
+    public int getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getNome() {
         return nome;
     }
 
@@ -49,5 +59,19 @@ public class Aluno {
     }
         return false;
     }
-
-}
+    
+    public String toString() {
+    	
+    	return this.nome+" | "+this.idade;
+    	
+    }
+    
+    public boolean equals(Aluno aluno) {
+    	
+    	if(this.matricula == aluno.matricula)
+    		return true;
+    	return false;
+    	
+    }
+    
+    }

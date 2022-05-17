@@ -3,10 +3,10 @@ public class LSE implements Lista {//TAD Lista simplesmente encadeada
     public LSE (){
     this.inicio = null;
     }
-    public void insereInicio(Object aluno) { 
+    public void insereInicio(Object info) { 
 
         
-        Noh novo = new Noh((Aluno)aluno);
+        Noh novo = new Noh(info);
         if (inicio == null)
             inicio = novo;
         else {
@@ -15,9 +15,9 @@ public class LSE implements Lista {//TAD Lista simplesmente encadeada
         }
         
     }
-    public void insereFim(Object aluno) { 
+    public void insereFim(Object info) { 
 
-        Noh novo = new Noh((Aluno) aluno);
+        Noh novo = new Noh(info);
         if (inicio == null)
             inicio = novo;
         else {
@@ -36,17 +36,17 @@ public class LSE implements Lista {//TAD Lista simplesmente encadeada
         return false;
     }
 
-    public boolean remove(Object aluno) {
+    public boolean remove(Object info) {
 
         Noh ant = null, p;
         p = inicio;
-        while (p!=null && p.getInfo() != (Aluno)aluno){ //busca
+        while (p!=null && p.getInfo() != info){ //busca
             ant = p;
             p = p.getProx();
         }
-        if (p==null) // não achou, então não faz nada e retorna false
+        if (p==null) // n�o achou, ent�o n�o faz nada e retorna false
             return false;
-        if (ant==null) //retira info do início
+        if (ant==null) //retira info do in�cio
             inicio = p.getProx();
         else
             ant.setProx(p.getProx());
@@ -71,7 +71,7 @@ public class LSE implements Lista {//TAD Lista simplesmente encadeada
 
         Noh p = this.inicio;
         while (p!=null){ 
-            System.out.println(""+p.getInfo().getNome()+" /"+"/ "+p.getInfo().getIdade()+"");
+            System.out.println(p.getInfo());
             p = p.getProx();
         }
 
