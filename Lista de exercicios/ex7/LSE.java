@@ -77,11 +77,11 @@ public class LSE implements Lista {//TAD Lista simplesmente encadeada
 
     }
 
-    public int imprime_rec(Noh prox){
-        Noh p = prox;
+    public void imprime_rec(){
+        Noh p = inicio;
         if(p.getInfo() != null){
             System.out.println(p.getInfo());
-            return imprime_rec(p.getProx());
+            return imprime_rec();
         } else {
             return 0;
         }

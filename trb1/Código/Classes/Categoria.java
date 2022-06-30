@@ -1,6 +1,6 @@
 package Classes;
 
-public class Categoria {
+public class Categoria { //Essa classe contém os atributos de uma categoria
     private int identificador;
     private String nome;
 
@@ -9,7 +9,11 @@ public class Categoria {
         this.nome = nome;
     }
 
-    public int getIdentificador() {
+    public Categoria() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getIdentificador() {
         return identificador;
     }
 

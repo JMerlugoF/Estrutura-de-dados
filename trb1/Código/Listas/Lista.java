@@ -6,6 +6,7 @@ public interface Lista {
     public boolean estahVazia();
     public boolean remove(Object element);
     public int tamanho();
-    public void listarcrescente();
-    public void listardecrescente();
+    public void listarCrescente();
+    public void listarDecrescente();
+    public Object getObject(int x);
 }

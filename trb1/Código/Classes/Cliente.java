@@ -1,12 +1,16 @@
 package Classes;
 
-public class Clientes {
+import Listas.LDE;
+import Listas.Lista;
+
+public class Cliente { //Essa classe contém os atributos de um cliente
+	static Lista clientes = new LDE();
     private int CNH;
     private String nome;
     private int telefone;
     private  int CPF;
 
-    public Clientes(int CNH, String nome, int telefone, int CPF){
+    public Cliente(int CNH, String nome, int telefone, int CPF){
 
         this.CNH = CNH;
         this.nome = nome;
@@ -45,6 +49,10 @@ public class Clientes {
 
     public void setCPF(int CPF) {
         this.CPF = CPF;
+    }
+    
+    public String toString() {
+        return "Clientes [Nome = " + nome + ", CPF = " + CPF + ", CNH = " + CNH + "e Telefone = " + telefone + "]";
     }
 
 }

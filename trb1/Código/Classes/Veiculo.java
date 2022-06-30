@@ -1,6 +1,7 @@
 package Classes;
 
-public class Veiculos {
+public class Veiculo { //Essa classe contém os atributos de um veículo
+	
     private String placa;
     private String modelo;
     private String marca;
@@ -9,7 +10,7 @@ public class Veiculos {
     private int nLugares;
     private Categoria categoria;
 
-    public Veiculos(String placa, String modelo, String marca, int ano, int potencia, int nLugares, Categoria categoria) {
+    public Veiculo(String placa, String modelo, String marca, int ano, int potencia, int nLugares, Categoria categoria) {
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
@@ -19,7 +20,11 @@ public class Veiculos {
         this.categoria = categoria;
     }
 
-    public String getPlaca() {
+	public Veiculo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getPlaca() {
         return placa;
     }
 
@@ -74,5 +79,11 @@ public class Veiculos {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
+	@Override
+	public String toString() {
+		return "Veiculo [placa=" + placa + ", modelo=" + modelo + ", marca=" + marca + ", ano=" + ano + ", potencia="
+				+ potencia + ", nLugares=" + nLugares + ", categoria=" + categoria + "]";
+	}
 
 }

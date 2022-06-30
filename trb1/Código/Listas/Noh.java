@@ -1,7 +1,7 @@
 package Listas;
 
 public class Noh {
-    private Object info; //este exemplo armazena n�meros inteiros
+    private Object info;
     private Noh ant;
     private Noh prox;
     public Noh (Object info){
@@ -10,6 +10,7 @@ public class Noh {
         this.prox = null;
     }
     public Object getInfo() { return this.info; }
+    public void setInfo(Object info) {this.info = info;}
     public Noh getProx() { return this.prox; }
     public void setProx(Noh n) { this.prox = n; }
 
